@@ -21,9 +21,13 @@
 
 apply plugin: 'java-library'
 
-[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+//[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+java {
 sourceCompatibility = targetCompatibility = appJavaCompatibility
-
+}
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
 dependencies {
     implementation project(':SPD-classes')
     api project(':services')
