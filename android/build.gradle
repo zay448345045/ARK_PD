@@ -51,8 +51,9 @@ android {
         applicationVariants.all { variant ->
             variant.outputs.all {
                 outputFileName = parent.project.getName() + "-v${variant.versionName}.apk"}}
-    }
 */
+    }
+
     sourceSets {
         main {
             jniLibs.srcDirs = ['libs']
