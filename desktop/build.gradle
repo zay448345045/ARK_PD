@@ -1,8 +1,12 @@
 apply plugin: "java"
 
-[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+//[compileJava, compileTestJava]*.options*.encoding = 'UTF-8'
+java {
 sourceCompatibility = targetCompatibility = appJavaCompatibility
-
+}
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
 ext.appMainClass = "com.shatteredpixel.shatteredpixeldungeon.desktop.DesktopLauncher"
 processResources {
     from new File(project(':core').projectDir, "/src/main/assets")
