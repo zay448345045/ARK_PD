@@ -111,3 +111,8 @@ tasks.matching { it.name.contains("merge") && it.name.contains("JniLibFolders") 
     packageTask.dependsOn 'copyAndroidNatives'
 }
 
+kotlin {
+    compilerOptions {
+        jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_25)
+    }
+}
