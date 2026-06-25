@@ -8,12 +8,13 @@ android {
     namespace 'com.shatteredpixel.shatteredpixeldungeon.android'
     compileSdkVersion appAndroidCompileSDK
     compileOptions.sourceCompatibility = compileOptions.targetCompatibility = appJavaCompatibility
-
+/*
 kotlinOptions {
        
         jvmTarget = '25' 
     }
 
+*/
     sourceSets.main.assets.srcDirs = [new File(project(':core').projectDir, "/src/main/assets")]
 
     signingConfigs {
